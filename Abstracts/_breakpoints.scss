@@ -1,0 +1,34 @@
+$breakpoints : (
+  smartphone-large: 400px,
+  tablet: 480px,
+  tablet-large: 768px,
+  desktop: 1024px,
+  desktop-large: 1280px,
+  desktop-x-large: 1450px,
+);
+
+// MEDIA QUERIES
+@mixin respond-to($media) {
+  @if $media == 'print' {
+    @media print {
+        @content;
+    }
+  }
+
+  @else if $media == 'retina' {
+    @media  only screen and (min-resolution: 192dpi),
+      only screen and (min-resolution: 2dppx) {
+        @content;
+    }
+  }
+
+  @else {
+    @each $breakpoint-name, $breakpoint-width in $breakpoints {
+      @if $media == $breakpoint-name {
+        @media  only screen and(min-width: $breakpoint-width){
+          @content;
+        }
+      }
+    }
+  }
+}
