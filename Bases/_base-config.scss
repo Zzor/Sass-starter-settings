@@ -1,0 +1,36 @@
+*::-moz-selection,
+*::selection {
+  color: var(--color-bg-inverse);
+  background-color: var(--color-primary);
+}
+
+body {
+  padding-top: var(--navbar-height);
+  overflow-x: hidden;
+  color: var(--color-text);
+  font-family: $--font-text;
+}
+
+@for $i from 1 through 6 {
+  h-#{$i} {
+    font-family: $--font-title !important;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+picture {
+  max-width: 100%;
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
