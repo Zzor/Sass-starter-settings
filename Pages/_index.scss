@@ -1,3 +1,15 @@
 // # Home specific styles
 // # Contact specific styles
 // # Etc...
+
+// I prefix the styles of my pages by p-
+// Exemple
+.p-home {
+  .p-home__header {
+    .p-home__header-background {
+      img {
+
+      }
+    }
+  }
+}
