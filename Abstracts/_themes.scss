@@ -1,0 +1,40 @@
+:root {
+  --color-brand-sass: #cd6799;
+  --color-brand-css: #2965f1;
+  --color-brand-html: #f16529;
+  --color-brand-js: #f0db4f;
+  --color-brand-jquery: #131b28;
+  --color-brand-wordpress: #00749c;
+  --color-brand-design: #009e7b;
+  --color-transparent: rgba(255, 255, 255, 0);
+  --color-shadow: rgba(239, 81, 173, 0.1);
+  --color-white: #fcfdff;
+}
+
+@media(prefers-color-scheme: light) {
+  :root {
+    --color-primary: #ff366e;
+    --color-secondary: #735afb;
+    --color-tertiary: #558ffc;
+    --color-text: #1d1d24;
+    --color-text-medium: #858384;
+    --color-text-inverse:#fcfdff;
+    --color-bg: #fcfdff;
+    --color-bg-medium: #fafafb;
+    --color-bg-inverse: #1d1d24;
+  }
+}
+
+@media(prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #ff366e;
+    --color-secondary: #735afb;
+    --color-tertiary: #558ffc;
+    --color-text: #1d1d24;
+    --color-text-medium: #858384;
+    --color-text-inverse:#fcfdff;
+    --color-bg: #fcfdff;
+    --color-bg-medium: #fafafb;
+    --color-bg-inverse: #1d1d24;
+  }
+}
