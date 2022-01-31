@@ -8,13 +8,13 @@
 }
 
 @mixin up($size) {
-  @media (min-width: $size * 1px) { @content; }
+  @media (min-width: ($size * 1px)) { @content; }
 }
 
 @mixin down($size) {
-  @media (max-width: $size * 1px) { @content; }
+  @media (max-width: ($size * 1px)) { @content; }
 }
 
 @mixin between($down, $up) {
-  @media (min-width: $down * 1px) and (max-width: $up * 1px) { @content; }
+  @media (min-width: ($down * 1px)) and (max-width:($up * 1px)) { @content; }
 }
