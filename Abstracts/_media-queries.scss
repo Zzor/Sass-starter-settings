@@ -1,0 +1,20 @@
+// MEDIA QUERIES
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+@mixin up($size) {
+  @media (min-width: $size * 1px) { @content; }
+}
+
+@mixin down($size) {
+  @media (max-width: $size * 1px) { @content; }
+}
+
+@mixin between($down, $up) {
+  @media (min-width: $down * 1px) and (max-width: $up * 1px) { @content; }
+}
